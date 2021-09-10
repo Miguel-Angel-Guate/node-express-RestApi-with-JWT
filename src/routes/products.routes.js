@@ -10,14 +10,15 @@ const express = require('express')
 const router = express.Router()
 // const app = express()
 
-
+router.post('/', createProducts)
 
 router.get('/', getProducts)
 
+router.get('/:productID', getProductsById)
 
+router.put('/:productID', updateProductsById)
 
-
-
+router.delete('/', deleteProducstById)
 
 module.exports = router
 /* JUST CALLIN FOR PRACTICE*/
