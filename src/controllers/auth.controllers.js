@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const jwt = require('jsonwebtoken');
-
+const SECRET = require('../config')
 
 const signUp = async (req, res) => {
     try{
@@ -12,7 +12,7 @@ const signUp = async (req, res) => {
         password: await User.encryptPassword(password)
     })
      const saveUser =   await newUser.save();
-    const token = jwt.sign({id: saveUser._id}, 'products-api' , {
+    const token = jwt.sign({id: saveUser._id}, SECRET , {
          expiresIn: 86400 // un día
      })
      console.log(token)

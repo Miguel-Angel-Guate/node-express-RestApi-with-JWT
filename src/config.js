@@ -1,1 +1,2 @@
-const SECRET = 'products-api'
+const SECRET = "hello"
+module.exports = SECRET
