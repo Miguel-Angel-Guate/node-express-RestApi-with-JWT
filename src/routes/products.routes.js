@@ -3,7 +3,7 @@ const {
     getProducts,
     getProductsById,
     updateProductsById,
-    deleteProducstById
+    deleteProductsById
 } = require('../controllers/products.controllers')
 
 const express = require('express')
@@ -18,7 +18,7 @@ router.get('/:productID', getProductsById)
 
 router.put('/:productID', updateProductsById)
 
-router.delete('/', deleteProducstById)
+router.delete('/:productID', deleteProductsById)
 
 module.exports = router
 /* JUST CALLIN FOR PRACTICE*/
